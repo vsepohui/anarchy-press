@@ -5,7 +5,7 @@ use Mojo::Base 'Mojolicious', -signatures;
 sub startup ($self) {
 
   # Load configuration from config file
-  my $config = $self->plugin('NotYAMLConfig');
+  my $config = $self->plugin('Config');
 
   # Configure the application
   $self->secrets($config->{secrets});
