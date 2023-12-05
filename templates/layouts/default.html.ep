@@ -17,9 +17,11 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Merriweather&display=swap" rel="stylesheet">
-	<style>
-
-	</style>
+	
+	<script src="/js/bootstrap.bundle.min.js"></script>
+	<script src="/js/jquery-3.7.1.slim.min.js"></script>
+	<script src="/js/imagesloaded.pkgd.min.js"></script>
+	<script src="/js/masonry.pkgd.min.js"></script>
 </head>
 <body>
 <main>
