@@ -4,8 +4,6 @@ use strict;
 use warnings;
 use 5.022;
 
-use base 'Accessor';
-
 use FindBin qw($Bin);
 
 sub new {
