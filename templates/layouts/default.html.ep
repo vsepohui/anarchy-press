@@ -6,7 +6,7 @@
     <meta name="generator" content="Wordpress">
     <title><%= title || 'Анархия :: Печатное Издание' %></title>
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/style.css?v=5" rel="stylesheet">
+	<link href="/css/style.css?v=6" rel="stylesheet">
 
 	<link rel="apple-touch-icon" href="/ico-256.png" sizes="256x256">
 	<link rel="icon" href="/ico-32.png" sizes="32x32" type="image/png">

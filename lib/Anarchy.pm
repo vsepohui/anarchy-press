@@ -6,14 +6,17 @@ use strict;
 use warnings;
 use 5.022;
 
+use Anarchy::Config;
+
 use Mojo::Redis;
 
 
 sub startup {
 	my $self = shift;
 
-	my $config = $self->plugin('Config');
+	my $config = $self->{config} = new Anarchy::Config;
 	$self->secrets($config->{secrets});
+	
 	
 	$self->init_helpers();
 
@@ -23,12 +26,17 @@ sub startup {
 	$r->get('/creative')->to('News#news');
 	$r->get('/ads')->to('News#news');
 	
+	
+	$r->get('/:section/*article')->to('News#article');
+	
 	$r->get('/publish')->to('News#publish');
 	
 	$r->get('/chat')->to('Chat#chat');
 	$r->websocket('/chat/socket')->to('Chat#socket')->name('chat-socket');
 	
 	$r->get('/feedback')->to('Feedback#feedback');
+	
+	$r->any([qw/GET POST/] => '/admin')->to('Admin#login');
 }
 
 

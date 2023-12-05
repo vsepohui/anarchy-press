@@ -1,5 +1,5 @@
 % layout 'default';
-% title 'Чат';
+% title 'Анархия :: Чат';
 <div class="row" style="margin-bottom: 30px;">
       <form>
       <div class="row">

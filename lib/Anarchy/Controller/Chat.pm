@@ -24,7 +24,7 @@ sub socket {
     my $cb = $pubsub->listen('chat:anarchy' => sub { 
         my ($pubsub, $msg) = @_;
         
-		my $k = "chat:limit:$ip";
+		my $k = "chat:limit:".$self->tx->remote_address;
 		return if $redis->db->get($k);
 		$redis->db->set($k, 1);
 		$redis->db->expire($k, 5);

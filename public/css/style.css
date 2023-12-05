@@ -9,10 +9,23 @@ body {
 	font-family: 'Merriweather', serif;
 	width: 100%;
 }
+
+.link {
+	color: #303010;
+	text-decoration: none !important;
+}
+
 .tt {
 	color: #303010;
 	text-decoration: none !important;
 }
+
+.atime {
+	margin-bottom:-1px; 
+	margin-top: -3px;
+	text-align: center;
+}
+
 hr {
 	background-color: #303010; 
 	color: #color; 
