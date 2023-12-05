@@ -25,14 +25,14 @@ sub startup {
 	$r->get('/politics')->to('News#news');
 	$r->get('/creative')->to('News#news');
 	$r->get('/ads')->to('News#news');
-	
+	$r->websocket('/chat/socket')->to('Chat#socket')->name('chat-socket');
 	
 	$r->get('/:section/*article')->to('News#article');
 	
 	$r->get('/publish')->to('News#publish');
 	
 	$r->get('/chat')->to('Chat#chat');
-	$r->websocket('/chat/socket')->to('Chat#socket')->name('chat-socket');
+	
 	
 	$r->get('/feedback')->to('Feedback#feedback');
 	
