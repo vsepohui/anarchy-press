@@ -9,6 +9,10 @@ body {
 	font-family: 'Merriweather', serif;
 	width: 100%;
 }
+.tt {
+	color: #303010;
+	text-decoration: none !important;
+}
 hr {
 	background-color: #303010; 
 	color: #color; 
@@ -19,4 +23,8 @@ hr {
 .sub-title {
 	text-align: center; 
 	margin-top: -10px;
+}
+
+a.active {
+	font-weight: bolder; 
 }

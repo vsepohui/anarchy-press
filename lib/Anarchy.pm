@@ -1,20 +1,41 @@
 package Anarchy;
-use Mojo::Base 'Mojolicious', -signatures;
 
-# This method will run once at server start
-sub startup ($self) {
+use base 'Mojolicious';
 
-  # Load configuration from config file
-  my $config = $self->plugin('Config');
+use strict;
+use warnings;
+use 5.022;
 
-  # Configure the application
-  $self->secrets($config->{secrets});
+use Mojo::Redis;
 
-  # Router
-  my $r = $self->routes;
 
-  # Normal route to controller
-  $r->get('/')->to('Example#welcome');
+sub startup {
+	my $self = shift;
+
+	my $config = $self->plugin('Config');
+	$self->secrets($config->{secrets});
+	
+	$self->init_helpers();
+
+	my $r = $self->routes;
+	$r->get('/')->to('News#news');
+	$r->get('/politics')->to('News#news');
+	$r->get('/creative')->to('News#news');
+	$r->get('/ads')->to('News#news');
+	
+	$r->get('/publish')->to('News#publish');
+	
+	$r->get('/chat')->to('Chat#chat');
+	$r->websocket('/chat/socket')->to('Chat#socket')->name('chat-socket');
+	
+	$r->get('/feedback')->to('Feedback#feedback');
 }
+
+
+sub init_helpers {
+	my $self = shift;
+    $self->helper(redis => sub { state $r = Mojo::Redis->new });
+}
+
 
 1;

@@ -1,0 +1,69 @@
+% layout 'default';
+% title 'Чат';
+<div class="row" style="margin-bottom: 30px;">
+      <form>
+      <div class="row">
+		<div class="col-auto">
+			<input class="form-control " type="search" name="message" maxlengt="1000" size="40" value="" disabled>
+        </div>
+		<div class="col-auto">
+			<button class="btn btn-primary button" id="chat">Чат</button>
+		</div>
+      </div>
+      </form>
+      <div id="messages">Connecting...</div>
+</div>
+
+    %= javascript begin
+      var formEl = document.getElementsByTagName("form")[0];
+      var inputEl = formEl.message;
+      var messagesEl = document.getElementById("messages");
+    % use Mojo::JSON qw/to_json/;
+      var messages = <%== to_json (stash ('chat') || []) %>;
+      var ws = new WebSocket("<%= url_for('chat-socket')->to_abs %>");
+      var hms = function() {
+        var d = new Date();
+        return [d.getHours(), d.getMinutes(), d.getSeconds()].map(function(v) {
+          return v < 10 ? "0" + v : v;
+        }).join(":");
+      };
+      
+      function render_chat () {
+          messagesEl.innerHTML = messages.join('<br>');
+      }
+
+      formEl.addEventListener("submit", function(e) {
+        e.preventDefault();
+        if (inputEl.value.length) ws.send(inputEl.value);
+        inputEl.value = "";
+        var butt = $('#chat');;
+        butt.prop('disabled', true);
+		butt.html("5");
+        var timerId = setInterval(function() { 
+			butt.html(butt.html() - 1);
+			if (butt.html() == 0) {
+				butt.html("Чат");
+				butt.prop('disabled', false);
+				clearTimeout(timerId);
+			}
+        }, 1000);
+      });
+
+      ws.onopen = function(e) {
+        inputEl.disabled = false;
+        document.getElementsByTagName("button")[0].disabled = false;
+        messages.unshift(hms() + " &lt;server> Connected.");
+        render_chat();
+      };
+
+      ws.onmessage = function(e) {
+        // messagesEl.innerHTML = e.data.replace(/</g, "&lt;") + "<br>" + messagesEl.innerHTML;
+        messages.unshift(e.data.replace(/</g, "&lt;"));
+        if (messages.length > 100) {
+            messages.pop();
+        }
+        
+        render_chat();
+      };
+    % end
+

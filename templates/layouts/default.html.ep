@@ -4,9 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="generator" content="Wordpress">
-    <title>Анархия :: Печатное Издание</title>
+    <title><%= title || 'Анархия :: Печатное Издание' %></title>
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/style.css" rel="stylesheet">
+	<link href="/css/style.css?v=5" rel="stylesheet">
 
 	<link rel="apple-touch-icon" href="/ico-256.png" sizes="256x256">
 	<link rel="icon" href="/ico-32.png" sizes="32x32" type="image/png">
@@ -26,15 +26,29 @@
 <body>
 <main>
 	<div class="container">	
-		<p class="title">Анархия</p>
+		<p class="title"><a href="/" class="tt">Анархия</a></p>
 		<hr style="margin-top: -1px;"/>
 		<p class="sub-title">Ежедневное Печатное Издание - издающееся Анархистами России с 2023 года.</p>
 		<hr/>
-			<%= content %>
-		</div>
-		<hr/>
-		<p align="center">Претензии принимаются на email руководителя издания - Товарища Трунаева - trunaev.ivan@icloud.com. По вопросам размещение рекламы - обращаться туда же.</p>
+% my $url = url_for;
+	<div class="nav-scroller py-1 mb-2" style="margin-top: -22px; margin-bottom: -5px !important;">
+	<nav class="nav justify-content-between">
+		<a class="nav-item nav-link link-body-emphasis<%= ' active' if $url =~ /^\/$/ %>" href="/">Публикации</a>
+		<a class="nav-item nav-link link-body-emphasis<%= ' active' if $url =~ /^\/politics/ %>" href="/politics">Политика</a>
+		<a class="nav-item nav-link link-body-emphasis<%= ' active' if $url =~ /^\/creative/ %>" href="/creative">Культура</a>
+		<a class="nav-item nav-link link-body-emphasis<%= ' active' if $url =~ /^\/ads/ %>" href="/ads">Реклама</a>
+		<a class="nav-item nav-link link-body-emphasis<%= ' active' if $url =~ /^\/publish/ %>" href="/publish">Подать публикацию</a>
+		<a class="nav-item nav-link link-body-emphasis<%= ' active' if $url =~ /^\/chat/ %>" href="/chat">Чат</a>
+		<a class="nav-item nav-link link-body-emphasis<%= ' active' if $url =~ /^\/feedback/ %>" href="/feedback">Обратная связь</a>
+	</nav>
 	</div>
+	<hr/>	
+	<div class="container">	
+		<%= content %>
+	</div>
+	<hr/>
+	<p align="center">Претензии принимаются на email руководителя издания - Товарища Трунаева - trunaev.ivan@icloud.com. По вопросам размещение рекламы - обращаться туда же.</p>
+</div>
 </main>
 </body>
 </html>

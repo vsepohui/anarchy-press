@@ -1,5 +1,5 @@
 % layout 'default';
-% title 'Welcome';
+%# title 'Welcome';
 <div class="row">
 <div class="col-md-6">
 	<h4 align="center">Анархо-синдикалисты<br/> не нейтральны к империализму</h4>
