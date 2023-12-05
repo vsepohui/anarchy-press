@@ -15,6 +15,11 @@ body {
 	text-decoration: none !important;
 }
 
+
+.link:hover {
+	color: #303010;
+}
+
 .tt {
 	color: #303010;
 	text-decoration: none !important;
@@ -33,6 +38,11 @@ hr {
 	opacity: 32%; 
 	margin-top: -7px;
 }
+
+.lh {
+	margin-top: -1px;
+}
+
 .sub-title {
 	text-align: center; 
 	margin-top: -10px;
@@ -40,4 +50,9 @@ hr {
 
 a.active {
 	font-weight: bolder; 
+}
+
+.a-nav {
+	margin-top: -22px; 
+	margin-bottom: -5px !important;
 }
