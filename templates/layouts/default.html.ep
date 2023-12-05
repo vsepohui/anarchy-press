@@ -5,20 +5,20 @@
     <meta name="description" content="">
     <meta name="generator" content="Wordpress">
     <title>Анархия :: Печатное Издание</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Favicons -->
-	<link rel="apple-touch-icon" href="ico-256.png" sizes="256x256">
-	<link rel="icon" href="ico-32.png" sizes="32x32" type="image/png">
-	<link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
-	<link rel="icon" href="favicon.png"/>
+	<link rel="apple-touch-icon" href="/ico-256.png" sizes="256x256">
+	<link rel="icon" href="/ico-32.png" sizes="32x32" type="image/png">
+	<link rel="icon" href="/favicon.png" sizes="16x16" type="image/png">
+	<link rel="icon" href="/favicon.png"/>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Merriweather&display=swap" rel="stylesheet">
 </head>
-<body style="background-image: url('./bg.png'); color: #303010; font-family: 'IBM Plex Mono', monospace;">
+<body style="background-image: url('/bg.png'); color: #303010; font-family: 'IBM Plex Mono', monospace;">
 <main>
 	<div class="container">	
 		<p style="width: 100%;"><h1 style="text-align: center; font-size: 82px; font-family: 'Merriweather', serif;">Анархия</h1></p>
