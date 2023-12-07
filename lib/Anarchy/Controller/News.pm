@@ -65,7 +65,7 @@ sub news {
 	my $title = '';
 	
 	if ($url eq '/') {	
-		@posts = $self->section(qw/creative politics ads/);
+		@posts = $self->section(qw/creative politics ads letters/);
 		$title = 'Печатное Издание';
 	} elsif ($url =~ /^\/creative/) {
 		@posts = $self->section('creative');
@@ -76,7 +76,11 @@ sub news {
 	} elsif ($url =~ /^\/ads/) {
 		@posts = $self->section('ads');
 		$title = 'Реклама';
+	} elsif ($url =~ /^\/letters/) {
+		@posts = $self->section('letters');
+		$title = 'Письма читателей';
 	}
+
 	
 	$self->render(
 		posts => \@posts,
@@ -88,7 +92,7 @@ sub article {
 	my $self = shift;
 	
 	my $section = $self->stash('section');
-	return $self->reply->not_found unless $section ~~ [qw/politics creative ads/];
+	return $self->reply->not_found unless $section ~~ [qw/politics creative ads letters/];
 	my $article = $self->stash('article');
 	return $self->reply->not_found unless $article =~ /^[\w\d\-]+\.html$/;
 	
