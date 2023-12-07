@@ -70,7 +70,7 @@ sub news {
 		$title = 'Печатное Издание';
 	} elsif ($url =~ /^\/creative/) {
 		@posts = $self->section('creative');
-		$title = 'Творчество';
+		$title = 'Культура';
 	} elsif ($url =~ /^\/politics/) {
 		@posts = $self->section('politics');
 		$title = 'Политика';

@@ -40,8 +40,8 @@ sub feedback {
 			Message => Encode::encode_utf8($text),
 		);
  
-		sendmail(%mail);		
-		
+		sendmail(%mail);
+
 		return $self->render(success => 'Ваше обращение успешно отправлено в редакцию!');
 	}
 	
