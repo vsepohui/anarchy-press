@@ -2,6 +2,7 @@
 Install at Debian
 sudo apt install cpanm
 sudo cpanm -n Mojolicious AnyEvent EV
+cp anarchy.conf.proto anarchy.conf
 
 # Starting servive
 morbo script/anarchy
