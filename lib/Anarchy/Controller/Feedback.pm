@@ -11,17 +11,16 @@ use Mail::Sendmail;
 
 sub feedback {
 	my $self = shift;
-	
+
 	if ($self->req->method() eq 'POST') {
 		my $name  = $self->param('name') or return;
 		my $email = $self->param('email') or return;
 		my $text  = $self->param('text') or return;
 		
-		return length $name > 60;
-		return length $email > 60;
-		return length $text > 3000;
-		
-		
+		return if length ($name) > 60;
+		return if length ($email) > 60;
+		return if length ($text) > 3000;
+	
 		my $ip = $self->tx->remote_address;
 		
 		my $redis = $self->redis;
