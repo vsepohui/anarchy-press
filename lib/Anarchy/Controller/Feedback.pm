@@ -7,6 +7,7 @@ use warnings;
 use utf8;
 
 use Mail::Sendmail;
+use Encode;
 
 
 sub feedback {
@@ -25,9 +26,9 @@ sub feedback {
 		
 		my $redis = $self->redis;
 		my $k = "feedback:limit:$ip";
-		if ($redis->db->get($k)) {
-			return $self->render(error => 'Вы недавно уже отправлял обращение, попробуйте позже.');
-		} 
+		#if ($redis->db->get($k)) {
+		#	return $self->render(error => 'Вы недавно уже отправлял обращение, попробуйте позже.');
+		#} 
 		
 		$redis->db->set($k, 1);
 		$redis->db->expire($k, 600);
@@ -36,7 +37,7 @@ sub feedback {
 			To      => 'trunaev.ivan@icloud.com',
 			From    => $email,
 			Subject => 'Обращение с сайта anarchy-press.ru',
-			Message => $text,
+			Message => Encode::encode_utf8($text),
 		);
  
 		sendmail(%mail);		
