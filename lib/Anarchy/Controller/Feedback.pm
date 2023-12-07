@@ -26,9 +26,9 @@ sub feedback {
 		
 		my $redis = $self->redis;
 		my $k = "feedback:limit:$ip";
-		#if ($redis->db->get($k)) {
-		#	return $self->render(error => 'Вы недавно уже отправлял обращение, попробуйте позже.');
-		#} 
+		if ($redis->db->get($k)) {
+			return $self->render(error => 'Вы недавно уже отправлял обращение, попробуйте позже.');
+		} 
 		
 		$redis->db->set($k, 1);
 		$redis->db->expire($k, 600);
