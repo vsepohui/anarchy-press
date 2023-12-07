@@ -5,9 +5,9 @@ use base 'Mojolicious';
 use strict;
 use warnings;
 use 5.022;
+use utf8;
 
 use Anarchy::Config;
-
 use Mojo::Redis;
 
 
@@ -35,7 +35,7 @@ sub startup {
 	$r->get('/chat')->to('Chat#chat');
 	
 	
-	$r->get('/feedback')->to('Feedback#feedback');
+	$r->any([qw/GET POST/] =>'/feedback')->to('Feedback#feedback');
 	
 	$r->any([qw/GET POST/] => '/admin')->to('Admin#login');
 }

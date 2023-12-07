@@ -1,6 +1,7 @@
 % layout 'default';
 % title 'Admin';
 <div class="d-flex align-items-center py-4 bg-body-tertiary" style="margin-bottom: 30px; text-align: center; width: 100%;">
+
 <main class="center m-auto">
   <form class="center" style="float: center; width: 400px;"  method="POST" action="">
     <h1 class="h3 mb-3">Sign in</h1>

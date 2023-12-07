@@ -7,6 +7,7 @@ use warnings;
 use 5.022;
 use FindBin qw($Bin);
 use utf8;
+use experimental 'smartmatch';
 
 sub dir {
 	my $self = shift;

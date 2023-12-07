@@ -13,11 +13,13 @@ sub new {
 	
 	unless ($self) {
 		my $fi;
+		
 		open $fi, $Bin.'/../anarchy.conf';
 		my $s = join '', <$fi>;
 		close $fi;
-	
-		$self = bless (eval $s), $class;
+		
+		$self = eval $s;
+		$self = bless $self, $class;
 	}
 	
 	return $self;
