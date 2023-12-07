@@ -37,7 +37,7 @@ sub feedback {
 			To      => 'trunaev.ivan@icloud.com',
 			From    => 'anarchy@anarchy-press.ru',
 			Subject => 'Обращение с сайта anarchy-press.ru',
-			Message => Encode::encode_utf8("From: $email\nIp:$ip\n-----\n$text"),
+			Message => Encode::encode_utf8("Name: $name\nEmail: $email\nIp:$ip\n-----\n$text"),
 		);
  
 		sendmail(%mail);
