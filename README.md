@@ -2,9 +2,9 @@
 
 Install at Debian
 
-sudo apt install cpanm
+sudo apt install cpanm redis
 
-sudo cpanm -n Mojolicious AnyEvent EV
+sudo cpanm -n Mojolicious AnyEvent EV Mojo::Redis
 
 cp anarchy.conf.proto anarchy.conf
 
