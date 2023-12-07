@@ -35,9 +35,9 @@ sub feedback {
 		
 		my %mail = ( 
 			To      => 'trunaev.ivan@icloud.com',
-			From    => $email,
+			From    => 'anarchy@anarchy-press.ru',
 			Subject => 'Обращение с сайта anarchy-press.ru',
-			Message => Encode::encode_utf8($text),
+			Message => Encode::encode_utf8("From: $email\nIp:$ip\n-----\n$text"),
 		);
  
 		sendmail(%mail);
