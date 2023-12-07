@@ -12,3 +12,5 @@ cp anarchy.conf.proto anarchy.conf
 morbo script/anarchy
 # Or
 hypnotoad script/anarchy
+
+# Developed by Ivan Trunaev 
