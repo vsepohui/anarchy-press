@@ -14,29 +14,46 @@ sub dir {
 	return "$Bin/../content";
 }
 
+sub load_index {
+	my $self = shift;
+	
+	my $fi;
+	open $fi, '<:encoding(utf8)', $self->dir() . '/index.txt' or return $self->reply->not_found;
+	my $s = join '', <$fi>;
+	close $fi;
+	
+	return split /\n/, $s;
+}
+
 sub section {
 	my $self 	= shift;
 	my @section = @_;
 	
 	my @files = ();	
-	for my $section (@section) {
-		my $d = $self->dir().'/'.$section;
-		my $dh;
-		opendir($dh, $d);
-		my @f = grep {$_ =~ /\.html$/ && -f "$d/$_"} readdir($dh);
-		closedir $dh;
-		
-		my @buff = ();
-		for my $f (@f) {
-			push @buff, {
-				name  => "$d/$f",
-				mtime => (stat "$d/$f")[9],
-			};
-		}
-		push @files, @buff;
+	#for my $section (@section) {
+	#	my $d = $self->dir().'/'.$section;
+	#	my $dh;
+	#	opendir($dh, $d);
+	#	my @f = grep {$_ =~ /\.html$/ && -f "$d/$_"} readdir($dh);
+	#	closedir $dh;
+	#	
+	#	my @buff = ();
+	#	for my $f (@f) {
+	#		push @buff, {
+	#			name  => "$d/$f",
+	#			mtime => (stat "$d/$f")[9],
+	#		};
+	#	}
+	#	push @files, @buff;
+	#}
+	#
+	#@files = sort {$b->{mtime} <=> $a->{mtime}} @files;
+	my $dir = $self->dir();
+	for ($self->load_index()) {
+		my ($s) = $_ =~ /^\.\/(\w+)\//;
+		push @files, {name => $dir . '/' . $_} if ($s ~~ \@section);
 	}
 	
-	@files = sort {$b->{mtime} <=> $a->{mtime}} @files;
 	
 	for my $f (@files) {
 		my $fi;

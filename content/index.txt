@@ -1,0 +1,13 @@
+./letters/2.html
+./creative/panchen-lama-gedhun-choekyi-nyima.html
+./creative/steve-jobs-interview.html
+./politics/constitution.html
+./creative/pokur.html
+./letters/1.html
+./politics/dionis.html
+./politics/lew-trotsky-i-nachalo-revolutsionnoy-deyatelnosti.html
+./politics/alaxey-navalny-interview.html
+./ads/salo-belorusskoe.html
+./creative/satana-pechet-bliny-interview.html
+./creative/yahwe-interview.html
+./politics/vladimir-putin-interview.html
