@@ -1,3 +1,4 @@
+./letters/3.html
 ./politics/dmitry-medvedev-interview.html
 ./creative/buddhism-poems-writing-technique.html
 ./politics/dalai-lama-to-lama-pachen-strong.html
