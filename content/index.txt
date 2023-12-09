@@ -1,3 +1,4 @@
+./ads/internet-markets-review.html
 ./letters/3.html
 ./politics/dmitry-medvedev-interview.html
 ./creative/buddhism-poems-writing-technique.html
