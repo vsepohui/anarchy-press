@@ -1,5 +1,4 @@
 % layout 'default';
-%# title 'Welcome';
 <div class="row">
 % for (@$posts) {
 <div class="col-md-6">

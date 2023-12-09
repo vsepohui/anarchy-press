@@ -1,6 +1,6 @@
 % layout 'default';
-% my ($title) = $article =~ /\<h4.*?\>(.*?)\<\/h4\>/;
-% title $title . ':: Анарихия';
+%# my ($title) = $article =~ /\<h4.*?\>(.*?)\<\/h4\>/;
+%# title $title . ':: Анарихия';
 
 <div class="container">
 <div class="center m-auto" style="align: center; max-width: 800px;">

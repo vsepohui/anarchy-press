@@ -9,6 +9,15 @@ use FindBin qw($Bin);
 use utf8;
 use experimental 'smartmatch';
 
+use constant SECTIONS => {
+	politics => 'Политика',
+	creative => 'Культура',
+	ads      => 'Реклама', 
+	letters  => 'Письма читателей',
+	dove     => 'Грачи',
+};
+
+
 sub dir {
 	my $self = shift;
 	return "$Bin/../content";
@@ -51,9 +60,12 @@ sub section {
 	my $dir = $self->dir();
 	for ($self->load_index()) {
 		my ($s) = $_ =~ /^\.\/(\w+)\//;
-		push @files, {name => $dir . '/' . $_} if ($s ~~ \@section);
+		push @files, {
+			name          => ($dir . '/' . $_), 
+			section       => $s,
+			section_alias => $self->SECTIONS()->{$s},
+		} if $s ~~ \@section;
 	}
-	
 	
 	for my $f (@files) {
 		my $fi;
@@ -81,24 +93,19 @@ sub news {
 	my $url = $self->url_for();
 	
 	my $title = '';
-	
+		
 	if ($url eq '/') {	
-		@posts = $self->section(qw/creative politics ads letters/);
+		@posts = $self->section(keys %{$self->SECTIONS()});
 		$title = 'Печатное Издание';
-	} elsif ($url =~ /^\/creative/) {
-		@posts = $self->section('creative');
-		$title = 'Культура';
-	} elsif ($url =~ /^\/politics/) {
-		@posts = $self->section('politics');
-		$title = 'Политика';
-	} elsif ($url =~ /^\/ads/) {
-		@posts = $self->section('ads');
-		$title = 'Реклама';
-	} elsif ($url =~ /^\/letters/) {
-		@posts = $self->section('letters');
-		$title = 'Письма читателей';
+	} else {
+		my ($section) = $url =~ /^\/(\w+)/;
+		if (my $alias = $self->SECTIONS()->{$section}) {
+			@posts = $self->section($section);
+			$title = $alias;
+		} else {
+			return $self->reply->not_found;
+		}
 	}
-
 	
 	$self->render(
 		posts => \@posts,
@@ -110,7 +117,7 @@ sub article {
 	my $self = shift;
 	
 	my $section = $self->stash('section');
-	return $self->reply->not_found unless $section ~~ [qw/politics creative ads letters/];
+	return $self->reply->not_found unless $section ~~ [keys %{$self->SECTIONS()}];
 	my $article = $self->stash('article');
 	return $self->reply->not_found unless $article =~ /^[\w\d\-]+\.html$/;
 	
@@ -120,7 +127,13 @@ sub article {
 	open $fi, '<:encoding(utf8)', $self->dir() . $file or return $self->reply->not_found;
 	my $s = join '', <$fi>;
 	close $fi;
-	return $self->render(article => $s);
+	
+	my ($title) = $s =~ /\<h4.*?\>(.*?)\<\/h4\>/;
+	
+	return $self->render(
+		article => $s,
+		title   => $title . ' :: ' . $self->SECTIONS()->{$section} . ' :: Анархия',
+	);
 }
 
 sub publish {
