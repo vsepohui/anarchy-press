@@ -1,3 +1,4 @@
+./politics/psychiatry-madness.html
 ./politics/trunaev-ivan-interview-for-pravda-ru.html
 ./politics/capitals-go-out-from-russia.html
 ./dove/billie-eilish.html
