@@ -1,3 +1,4 @@
+./politics/black-to-red-revolution.html
 ./politics/prototype-of-constitution.html
 ./politics/kyev-panic-plan.html
 ./politics/psychiatry-madness.html
