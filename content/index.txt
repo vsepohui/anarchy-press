@@ -1,3 +1,4 @@
+./politics/prototype-of-constitution.html
 ./politics/kyev-panic-plan.html
 ./politics/psychiatry-madness.html
 ./politics/trunaev-ivan-interview-for-pravda-ru.html
