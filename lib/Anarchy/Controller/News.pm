@@ -10,6 +10,7 @@ use utf8;
 use experimental 'smartmatch';
 
 use constant SECTIONS => {
+	game     => 'Игра',
 	politics => 'Политика',
 	creative => 'Культура',
 	ads      => 'Реклама', 
