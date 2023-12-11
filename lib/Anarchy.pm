@@ -22,6 +22,7 @@ sub startup {
 
 	my $r = $self->routes;
 	$r->get('/')->to('News#news');
+	$r->get('/game')->to('News#news');
 	$r->get('/politics')->to('News#news');
 	$r->get('/creative')->to('News#news');
 	$r->get('/ads')->to('News#news');
