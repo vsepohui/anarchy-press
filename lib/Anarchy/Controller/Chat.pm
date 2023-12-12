@@ -5,6 +5,8 @@ use base 'Mojolicious::Controller';
 use strict;
 use warnings;
 
+# Try magick code based on some sudden code from habr.com, don't remember author, 
+# but thank you guy, you show me, how to work with webscokets (js template, copypasted too)
 
 my $cl = 'chat:anarchy:list';
 
