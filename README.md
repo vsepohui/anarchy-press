@@ -2,7 +2,7 @@
 
 Install at Debian
 
-sudo apt install cpanm redis sendmail
+sudo apt install cpanminus make build-essential redis sendmail
 
 sudo cpanm -n Mojolicious AnyEvent EV Mojo::Redis Mail::Sendmail
 
