@@ -27,15 +27,21 @@ sub dir {
 	return "$Bin/../content";
 }
 
-sub load_index {
+sub load_file {
 	my $self = shift;
+	my $file = shift;
 	
 	my $fi;
-	open $fi, '<:encoding(utf8)', $self->dir() . '/index.txt' or return $self->reply->not_found;
+	open $fi, '<:encoding(utf8)', $file or return $self->reply->not_found;
 	my $s = join '', <$fi>;
 	close $fi;
 	
-	return split /\n/, $s;
+	return $s;
+}
+
+sub load_index {
+	my $self = shift;
+	return split /\n/, $self->load_file($self->dir() . '/index.txt');
 }
 
 sub section {
@@ -60,10 +66,7 @@ sub section {
 	@files = splice(@files, ($page - 1) * $ipp, $ipp);
 
 	for my $f (@files) {
-		my $fi;
-		open $fi, '<:encoding(utf8)', $f->{name};
-		$f->{content} = join '', <$fi>;
-		close $fi;
+		$f->{content} = $self->load_file($f->{name});
 	}
 	
 	for (@files) {
@@ -117,12 +120,10 @@ sub article {
 	my $article = $self->stash('article');
 	return $self->reply->not_found unless $article =~ /^[\w\d\-]+\.html$/;
 	
-	my $file = $self->url_for;
-
-	my $fi;
-	open $fi, '<:encoding(utf8)', $self->dir() . $file or return $self->reply->not_found;
-	my $s = join '', <$fi>;
-	close $fi;
+	my $file = $self->dir() . $self->url_for;
+	return $self->reply->not_found unless -f $file;
+	
+	my $s = $self->load_file($file);
 	
 	my ($title) = $s =~ /\<h4.*?\>(.*?)\<\/h4\>/;
 	
