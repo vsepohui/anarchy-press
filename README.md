@@ -8,9 +8,9 @@ Install at Debian
 ```sudo cpanm -n Mojolicious AnyEvent EV Mojo::Redis Mail::Sendmail``` <br/>
 ```cp anarchy.conf.proto anarchy.conf``` <br/>
 
-# Starting servive
+# Starting service (devel):
 ```morbo script/anarchy``` 
-# Or
+# Or production:
 ```hypnotoad script/anarchy``` 
 
 # Developed by Ivan Trunaev 
