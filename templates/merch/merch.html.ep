@@ -1,0 +1,21 @@
+% layout 'default';
+% title 'Анархия :: Поддержать';
+<div class="container" style="margin-bottom: 30px; width: 100%;">
+
+<h2>Поддержать</h2><br/>
+
+Закажите фирменные изделия у нашего партнера <a href="https://printdirect.ru/?partner_id=803766" targer="_blank">printdirect.ru</a>:<br/>
+
+<div class="row">
+<div class="col-md-4">
+<a href="https://printdirect.ru/storefront/shared_info/9222983?partner_id=803766"><img class="img-thumbnail" src="/i/ts1.jpg"/></a>
+</div>
+<div class="col-md-4">
+<a href="https://printdirect.ru/storefront/shared_info/9222984?partner_id=803766"><img class="img-thumbnail" src="/i/ts2.jpg"/></a>
+</div>
+<div class="col-md-4">
+<a href="https://printdirect.ru/storefront/shared_info/9222988?partner_id=803766"><img class="img-thumbnail" src="/i/cup1.jpg"/></a>
+</div>
+</div>
+
+</div>

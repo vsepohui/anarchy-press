@@ -34,7 +34,8 @@ sub startup {
 	$r->get('/publish')->to('News#publish');
 	
 	
-	$r->any([qw/GET POST/] =>'/feedback')->to('Feedback#feedback');
+	$r->get('/merch')->to('Merch#merch');
+	#$r->any([qw/GET POST/] =>'/feedback')->to('Feedback#feedback');
 	
 	$r->any([qw/GET POST/] => '/admin')->to('Admin#login');
 }

@@ -41,7 +41,7 @@
 		<a class="nav-item nav-link link<%= ' active' if $url =~ /^\/ads/ %>" href="/ads">Реклама</a>
 		<a class="nav-item nav-link link<%= ' active' if $url =~ /^\/letters/ %>" href="/letters">Письма читателей</a>
 		<a class="nav-item nav-link link<%= ' active' if $url =~ /^\/dove/ %>" href="/dove">Грачи</a>
-		<a class="nav-item nav-link link<%= ' active' if $url =~ /^\/feedback/ %>" href="/feedback">Обратная связь</a>
+		<a class="nav-item nav-link link<%= ' active' if $url =~ /^\/merch/ %>" href="/merch">Поддержать</a>
 	</nav>
 	</div>
 	<hr/>	
