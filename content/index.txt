@@ -1,5 +1,5 @@
 ./letters/4.html
-./politics/boris-narzhdin-votes.html
+./politics/boris-nadezhdin-votes.html
 ./ads/manjaro-os.html
 ./creative/freddie-mercury-about-talks.html
 ./creative/gg-allin-chaos.html
