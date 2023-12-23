@@ -9,6 +9,8 @@ use FindBin qw($Bin);
 use utf8;
 use experimental 'smartmatch';
 
+use constant ITEM_PER_PAGE => 15;
+
 use constant SECTIONS => {
 	game     => 'Игра',
 	politics => 'Политика',
@@ -40,24 +42,7 @@ sub section {
 	my @section = @_;
 	
 	my @files = ();	
-	#for my $section (@section) {
-	#	my $d = $self->dir().'/'.$section;
-	#	my $dh;
-	#	opendir($dh, $d);
-	#	my @f = grep {$_ =~ /\.html$/ && -f "$d/$_"} readdir($dh);
-	#	closedir $dh;
-	#	
-	#	my @buff = ();
-	#	for my $f (@f) {
-	#		push @buff, {
-	#			name  => "$d/$f",
-	#			mtime => (stat "$d/$f")[9],
-	#		};
-	#	}
-	#	push @files, @buff;
-	#}
-	#
-	#@files = sort {$b->{mtime} <=> $a->{mtime}} @files;
+
 	my $dir = $self->dir();
 	for ($self->load_index()) {
 		my ($s) = $_ =~ /^\.\/(\w+)\//;
@@ -68,6 +53,11 @@ sub section {
 		} if $s ~~ \@section;
 	}
 	
+	my $ipp = $self->ITEM_PER_PAGE();
+	$self->stash(pages => int (scalar (@files) / $ipp) + 1);
+	my $page = $self->stash('page');
+	@files = splice(@files, ($page - 1) * $ipp, $ipp);
+
 	for my $f (@files) {
 		my $fi;
 		open $fi, '<:encoding(utf8)', $f->{name};
@@ -88,6 +78,10 @@ sub section {
 
 sub news {
 	my $self = shift;
+	
+	my $page = $self->param('page') // 1;
+	$page = 1 if ($page =~ /\D/);
+	$self->stash(page => $page);
 	
 	my @posts = ();
 	
