@@ -7,7 +7,8 @@ use warnings;
 use 5.022;
 use FindBin qw($Bin);
 use utf8;
-use experimental 'smartmatch';
+
+no warnings 'deprecated::smartmatch';
 
 use constant ITEM_PER_PAGE => 15;
 
@@ -112,7 +113,7 @@ sub article {
 	my $self = shift;
 	
 	my $section = $self->stash('section');
-	return $self->reply->not_found unless $section ~~ [keys %{$self->SECTIONS()}];
+	return $self->reply->not_found unless $section && $self->SECTIONS()->{$section};
 	my $article = $self->stash('article');
 	return $self->reply->not_found unless $article =~ /^[\w\d\-]+\.html$/;
 	
