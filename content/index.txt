@@ -1,3 +1,4 @@
+./creative/gg-allin-chaos.html
 ./game/3-matrix-win.html
 ./game/2-morpheus-new-deal.html
 ./game/1-exit-to-the-matrix.html
