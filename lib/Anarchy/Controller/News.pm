@@ -131,9 +131,5 @@ sub article {
 	);
 }
 
-sub publish {
-	my $self = shift;
-	$self->render;
-}
 
 1;
