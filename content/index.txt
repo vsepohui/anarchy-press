@@ -1,3 +1,4 @@
+./ads/manjaro-os.html
 ./creative/freddie-mercury-about-talks.html
 ./creative/gg-allin-chaos.html
 ./game/3-matrix-win.html
