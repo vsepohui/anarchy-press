@@ -8,7 +8,7 @@ use 5.022;
 use FindBin qw($Bin);
 use utf8;
 
-no warnings 'deprecated::smartmatch';
+no warnings 'experimental::smartmatch';
 
 use constant ITEM_PER_PAGE => 15;
 
