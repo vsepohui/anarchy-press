@@ -1,3 +1,4 @@
+./ads/russian-trip.html
 ./letters/4.html
 ./politics/boris-nadezhdin-votes.html
 ./ads/manjaro-os.html
