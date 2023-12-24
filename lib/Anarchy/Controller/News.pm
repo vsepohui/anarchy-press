@@ -10,7 +10,7 @@ use utf8;
 
 no warnings 'experimental::smartmatch';
 
-use constant ITEM_PER_PAGE => 15;
+use constant ITEM_PER_PAGE => 10;
 
 use constant SECTIONS => {
 	game     => 'Игра',
