@@ -1,3 +1,4 @@
+./creative/hashish-music.html
 ./ads/russian-trip.html
 ./letters/4.html
 ./politics/boris-nadezhdin-votes.html
