@@ -23,16 +23,36 @@ sub dir {
 	return "$Bin/../content";
 }
 
+sub _slurp_file {
+	my $self = shift;
+	my $file = shift;
+
+	my $s;
+	my $fi;
+	open $fi, '<:encoding(utf8)', $file or return $self->reply->not_found;
+	$s = join '', <$fi>;
+	close $fi;
+	
+	return $s;
+}
+
 sub load_file {
 	my $self = shift;
 	my $file = shift;
 	
-	my $fi;
-	open $fi, '<:encoding(utf8)', $file or return $self->reply->not_found;
-	my $s = join '', <$fi>;
-	close $fi;
+	state $cache = {};
 	
-	return $s;
+	unless (exists $cache->{$file}) {
+		$cache->{$file}->{content} = $self->_slurp_file($file);
+		$cache->{$file}->{ts} = (stat($file))[9];
+	} else {
+		if ($cache->{$file}->{ts} != (stat($file))[9]) {
+			$cache->{$file}->{content} = $self->_slurp_file($file);
+			$cache->{$file}->{ts} = (stat($file))[9];
+		}
+	}
+	
+	return $cache->{$file}->{content};
 }
 
 sub load_index {
