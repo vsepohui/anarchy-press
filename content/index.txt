@@ -1,4 +1,4 @@
-./skaza/about-psychiatry.html
+./skazka/about-psychiatry.html
 ./creative/new-weird-wave-in-america.html
 ./skazka/story-about-vampire.html
 ./food/new-year-dishes.html
