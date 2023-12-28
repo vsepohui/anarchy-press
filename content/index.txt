@@ -1,3 +1,4 @@
+./dove/pasha-techninque.html
 ./ads/reg-ru-domain-registrator.html
 ./skazka/about-russian-ball.html
 ./politics/bakunin-and-kroptkin-critics-from-criminal.html
