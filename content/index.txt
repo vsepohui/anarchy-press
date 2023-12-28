@@ -1,3 +1,4 @@
+./politics/bakunin-and-kroptkin-critics-from-criminal.html
 ./food/punk-dished.html
 ./skazka/about-punk-doll.html
 ./skazka/about-psychiatry.html
