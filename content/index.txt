@@ -1,3 +1,4 @@
+./skazka/about-russian-ball.html
 ./politics/bakunin-and-kroptkin-critics-from-criminal.html
 ./food/punk-dished.html
 ./skazka/about-punk-doll.html
