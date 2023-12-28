@@ -13,6 +13,7 @@
 	% my $s = $_->{snippet};
 	% my $url = $_->{name};
 	% $url =~ s/^.*(\/\w+\/[\w\d\-]+\.html)$/$1/;
+	% $s =~ s/\<p class=\"atime\"\>.*?\<\/p\>//;
 	% $s =~ s/(\<h4.*?\>)(.*?)(\<\/h4\>)/$1\<a class="link" href="$url"\>$2\<\/a\>$3/;
 	<title><%= $2 %></title>
 	<link>https://anarchy-press.ru<%= $url %></link>
