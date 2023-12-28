@@ -18,14 +18,10 @@ sub startup {
 	
 	my $r = $self->routes;
 	$r->get('/')->to('News#news');
-	$r->get('/skazka')->to('News#news');
-	$r->get('/game')->to('News#news');
-	$r->get('/politics')->to('News#news');
-	$r->get('/creative')->to('News#news');
-	$r->get('/ads')->to('News#news');
-	$r->get('/letters')->to('News#news');
-	$r->get('/dove')->to('News#news');
-	$r->get('/food')->to('News#news');
+	for (@{$self->config('sections')}) {
+		my ($key) = keys %$_;
+		$r->get('/' . $key)->to('News#news');
+	}
 
 	$r->get('/:section/*article')->to('News#article');
 

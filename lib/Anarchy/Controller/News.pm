@@ -12,16 +12,10 @@ no warnings 'experimental::smartmatch';
 
 use constant ITEM_PER_PAGE => 10;
 
-use constant SECTIONS => {
-	skazka   => 'Сказка',
-	game     => 'Игра',
-	politics => 'Политика',
-	creative => 'Культура',
-	ads      => 'Реклама', 
-	letters  => 'Письма читателей',
-	dove     => 'Грачи',
-	food     => 'Еда',
-};
+sub sections {
+	my $self = shift;
+	return {map {%$_} @{$self->config('sections')}};
+}
 
 
 sub dir {
@@ -58,7 +52,7 @@ sub section {
 		push @files, {
 			name          => ($dir . '/' . $_), 
 			section       => $s,
-			section_alias => $self->SECTIONS()->{$s},
+			section_alias => $self->sections()->{$s},
 		} if $s ~~ \@section;
 	}
 	
@@ -96,11 +90,11 @@ sub news {
 	my $title = '';
 		
 	if ($url eq '/') {	
-		@posts = $self->section(keys %{$self->SECTIONS()});
+		@posts = $self->section(keys %{$self->sections()});
 		$title = 'Печатное Издание';
 	} else {
 		my ($section) = $url =~ /^\/(\w+)/;
-		if (my $alias = $self->SECTIONS()->{$section}) {
+		if (my $alias = $self->sections()->{$section}) {
 			@posts = $self->section($section);
 			$title = $alias;
 		} else {
@@ -118,7 +112,7 @@ sub article {
 	my $self = shift;
 	
 	my $section = $self->stash('section');
-	return $self->reply->not_found unless $section && $self->SECTIONS()->{$section};
+	return $self->reply->not_found unless $section && $self->sections()->{$section};
 	my $article = $self->stash('article');
 	return $self->reply->not_found unless $article =~ /^[\w\d\-]+\.html$/;
 	
@@ -131,7 +125,7 @@ sub article {
 	
 	return $self->render(
 		article => $s,
-		title   => $title . ' :: ' . $self->SECTIONS()->{$section} . ' :: Анархия',
+		title   => $title . ' :: ' . $self->sections()->{$section} . ' :: Анархия',
 	);
 }
 
