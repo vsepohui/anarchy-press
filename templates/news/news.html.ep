@@ -33,15 +33,11 @@
 
 </div>
 
-	<script>
+<script>
 $(function() {
-var $grid = $('.row').masonry({
-	
+	var $grid = $('.row').masonry({});
+	$grid.imagesLoaded().progress( function() {
+		$grid.masonry('layout');
+	});
 });
-// layout Masonry after each image loads
-$grid.imagesLoaded().progress( function() {
-  $grid.masonry('layout');
-});
-});
-
-	</script>
+</script>

@@ -12,8 +12,7 @@
     <link rel="alternate" type="application/rss+xml" href="<%= $url eq '/' ? '/' : $url . '/'  %>feed.rss" />
     % }
     
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/style.css?v=8" rel="stylesheet">
+	<link href="/css/anarchy.min.css" rel="stylesheet">
 
 	<link rel="apple-touch-icon" href="/ico-256.png" sizes="256x256">
 	<link rel="icon" href="/ico-32.png" sizes="32x32" type="image/png">
@@ -25,10 +24,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Merriweather&display=swap" rel="stylesheet">
 	
-	<script src="/js/bootstrap.bundle.min.js"></script>
-	<script src="/js/jquery-3.7.1.slim.min.js"></script>
-	<script src="/js/imagesloaded.pkgd.min.js"></script>
-	<script src="/js/masonry.pkgd.min.js"></script>
+	<script src="/js/anarchy.min.js"></script>
 </head>
 <body>
 <main>
