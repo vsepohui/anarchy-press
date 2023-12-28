@@ -35,6 +35,7 @@
 			% my ($key) = keys %$_;
 			<a class="nav-item nav-link link<%= ' active' if $url =~ /^\/$key/ %>" href="/<%= $key %>"><%= $_->{$key} %></a>
 		% }
+		<a class="nav-item nav-link link<%= ' active' if $url =~ /^\/merch$/ %>" href="/merch">Поддержать</a>
 	</nav>
 	</div>
 	<hr/>	
