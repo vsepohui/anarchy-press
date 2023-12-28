@@ -1,3 +1,4 @@
+./food/punk-dished.html
 ./skazka/about-punk-doll.html
 ./skazka/about-psychiatry.html
 ./creative/new-weird-wave-in-america.html
