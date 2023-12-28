@@ -2,7 +2,7 @@
 
 <rss version="2.0">
 	
- <channel rdf:about="http://www.xml.com/xml/news.rss">
+ <channel>
    <title>Печатное Издание Анархия</title>
    <link>https://anarchy-press.ru/</link>
    <language>ru</language>
