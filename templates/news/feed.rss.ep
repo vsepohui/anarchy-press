@@ -13,9 +13,9 @@
 	% my $s = $_->{snippet};
 	% my $url = $_->{name};
 	% $url =~ s/^.*(\/\w+\/[\w\d\-]+\.html)$/$1/;
+	% $s =~ s/(\<h4.*?\>)(.*?)(\<\/h4\>)/$1\<a class="link" href="$url"\>$2\<\/a\>$3/;
 	<title><%= $2 %></title>
 	<link>https://anarchy-press.ru<%= $url %></link>
-	% $s =~ s/(\<h4.*?\>)(.*?)(\<\/h4\>)/$1\<a class="link" href="$url"\>$2\<\/a\>$3/;
 	% ($s = $s) =~ s/<[^>]*>//gs;  
 	<description>
 		%== $s;
