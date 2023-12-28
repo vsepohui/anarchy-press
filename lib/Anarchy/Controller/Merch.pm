@@ -7,7 +7,7 @@ use warnings;
 use utf8;
 
 
-sub feedback {
+sub merch {
 	my $self = shift;
 	$self->render;
 }
