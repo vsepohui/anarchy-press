@@ -1,15 +1,12 @@
 % my $url = url_for;
 <?xml version="1.0"?>
-
 <rss version="2.0">
-	
- <channel>
+<channel>
    <title>Печатное Издание Анархия</title>
    <link>https://anarchy-press.ru/</link>
    <language>ru</language>
    <description>Печатное Издание - издающееся Анархистами России с 2023 года.</description>
    <link rel="next" href="https://anarchy-press.ru<%= $url eq '/' ? '/' : $url . '/'  %>feed.rss?page=<%= $page + 1 %>"/>
-
 % for (@$posts) {
 	<item>
 	% my $s = $_->{snippet};
@@ -18,6 +15,11 @@
 	% $s =~ s/\<p class=\"atime\"\>.*?\<\/p\>//;
 	% $s =~ s/(\<h4.*?\>)(.*?)(\<\/h4\>)/$1\<a class="link" href="$url"\>$2\<\/a\>$3/;
 	<title><%= $2 %></title>
+	% my ($img) = $s =~ /\<img src=\"([^\"]+)\"/;
+	% $img = "https://anarchy-press.ru" . $img if ($img && !($img =~ /^https\:\/\//));
+	% if ($img) {
+	<p:imageLink><%= $img %></p:imageLink>
+	% }
 	<link>https://anarchy-press.ru<%= $url %></link>
 	% ($s = $s) =~ s/<[^>]*>//gs;  
 	<description>
@@ -25,10 +27,5 @@
 	</description>
 	</item>
 % }
-
  </channel>
 </rss>
-
-
-
-
