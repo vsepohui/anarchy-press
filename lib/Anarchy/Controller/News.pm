@@ -13,6 +13,7 @@ no warnings 'experimental::smartmatch';
 use constant ITEM_PER_PAGE => 10;
 
 use constant SECTIONS => {
+	skazka   => 'Сказка',
 	game     => 'Игра',
 	politics => 'Политика',
 	creative => 'Культура',

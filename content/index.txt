@@ -1,4 +1,4 @@
-./creative/story-about-vampire.html
+./skazka/story-about-vampire.html
 ./food/new-year-dishes.html
 ./creative/hashish-music.html
 ./ads/russian-trip.html
