@@ -1,3 +1,4 @@
+./skazka/about-punk-doll.html
 ./skazka/about-psychiatry.html
 ./creative/new-weird-wave-in-america.html
 ./skazka/story-about-vampire.html
