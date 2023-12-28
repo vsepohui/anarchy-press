@@ -12,18 +12,13 @@
     <link rel="alternate" type="application/rss+xml" href="<%= $url eq '/' ? '/' : $url . '/'  %>feed.rss" />
     % }
     
-	<link href="/css/anarchy.min.css?v=2" rel="stylesheet">
+	<link href="/css/anarchy.min.css?v=3" rel="stylesheet">
 
 	<link rel="apple-touch-icon" href="/ico-256.png" sizes="256x256">
 	<link rel="icon" href="/ico-32.png" sizes="32x32" type="image/png">
 	<link rel="icon" href="/favicon.png" sizes="16x16" type="image/png">
 	<link rel="icon" href="/favicon.png"/>
 
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Merriweather&display=swap" rel="stylesheet">
-	
 	<script src="/js/anarchy.min.js?v=2"></script>
 </head>
 <body>
