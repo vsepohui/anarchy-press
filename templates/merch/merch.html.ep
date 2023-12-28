@@ -8,14 +8,18 @@
 <br/>
 
 <div class="row">
-<div class="col-md-4">
+<div class="col-md-4" align="center">
 <a href="https://printdirect.ru/storefront/shared_info/9222983?partner_id=803766" target="_blank"><img class="img-thumbnail" src="/i/ts1.jpg"/></a>
+<a href="https://printdirect.ru/storefront/shared_info/9222983?partner_id=803766" class="btn btn-primary btn-lg" target="_blank">Заказать</a>
+
 </div>
-<div class="col-md-4">
+<div class="col-md-4" align="center">
 <a href="https://printdirect.ru/storefront/shared_info/9222984?partner_id=803766" target="_blank"><img class="img-thumbnail" src="/i/ts2.jpg"/></a>
+<a href="https://printdirect.ru/storefront/shared_info/9222984?partner_id=803766" class="btn btn-primary btn-lg" target="_blank">Заказать</a>
 </div>
-<div class="col-md-4">
+<div class="col-md-4" align="center">
 <a href="https://printdirect.ru/storefront/shared_info/9222988?partner_id=803766" target="_blank"><img class="img-thumbnail" src="/i/cup1.jpg"/></a>
+<a href="https://printdirect.ru/storefront/shared_info/9222988?partner_id=803766" class="btn btn-primary btn-lg" target="_blank">Заказать</a>
 </div>
 </div>
 
