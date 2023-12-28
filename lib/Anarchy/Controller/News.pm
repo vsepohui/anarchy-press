@@ -77,8 +77,10 @@ sub section {
 	}
 	
 	my $ipp = $self->ITEM_PER_PAGE();
-	$self->stash(pages => int (scalar (@files) / $ipp) + 1);
+	my $pages = int (scalar (@files) / $ipp) + 1;
+	$self->stash(pages => $pages);
 	my $page = $self->stash('page');
+	return if $page > $pages;
 	@files = splice(@files, ($page - 1) * $ipp, $ipp);
 
 	for my $f (@files) {
@@ -105,7 +107,7 @@ sub news {
 	my $self = shift;
 	
 	my $page = $self->param('page') // 1;
-	$page = 1 if ($page =~ /\D/);
+	return $self->reply->not_found if ($page =~ /\D/ || $page < 1);
 	$self->stash(page => $page);
 	
 	my @posts = ();
@@ -115,12 +117,12 @@ sub news {
 	my $title = '';
 		
 	if ($url eq '/' || $url eq '/feed.rss') {	
-		@posts = $self->section(keys %{$self->sections()});
+		@posts = $self->section(keys %{$self->sections()}) or return $self->reply->not_found;
 		$title = 'Печатное Издание';
 	} else {
 		my ($section) = $url =~ /^\/(\w+)/;
 		if (my $alias = $self->sections()->{$section}) {
-			@posts = $self->section($section);
+			@posts = $self->section($section) or return $self->reply->not_found;
 			$title = $alias;
 		} else {
 			return $self->reply->not_found;
