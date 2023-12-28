@@ -1,5 +1,5 @@
 % layout 'default', has_feed => 1;
-<div class="row">
+<div class="row" id="news">
 % for (@$posts) {
 <div class="col-md-6">
 	% my $s = $_->{snippet};
@@ -32,12 +32,3 @@
 % }
 
 </div>
-
-<script>
-$(function() {
-	var $grid = $('.row').masonry({});
-	$grid.imagesLoaded().progress( function() {
-		$grid.masonry('layout');
-	});
-});
-</script>
