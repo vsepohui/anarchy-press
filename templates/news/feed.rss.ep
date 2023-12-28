@@ -18,7 +18,7 @@
 	% my ($img) = $s =~ /\<img src=\"([^\"]+)\"/;
 	% $img = "https://anarchy-press.ru" . $img if ($img && !($img =~ /^https\:\/\//));
 	% if ($img) {
-	<p:imageLink><%= $img %></p:imageLink>
+	<image><%= $img %></image>
 	% }
 	<link>https://anarchy-press.ru<%= $url %></link>
 	% ($s = $s) =~ s/<[^>]*>//gs;  
