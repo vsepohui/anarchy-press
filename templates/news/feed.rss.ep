@@ -1,3 +1,4 @@
+% my $url = url_for;
 <?xml version="1.0"?>
 
 <rss version="2.0">
@@ -7,6 +8,7 @@
    <link>https://anarchy-press.ru/</link>
    <language>ru</language>
    <description>Печатное Издание - издающееся Анархистами России с 2023 года.</description>
+   <link rel="next" href="https://anarchy-press.ru<%= $url eq '/' ? '/' : $url . '/'  %>feed.rss?page=<%= $page + 1 %>"/>
 
 % for (@$posts) {
 	<item>
