@@ -1,3 +1,4 @@
+./food/new-year-dishes.html
 ./creative/hashish-music.html
 ./ads/russian-trip.html
 ./letters/4.html

@@ -19,6 +19,7 @@ use constant SECTIONS => {
 	ads      => 'Реклама', 
 	letters  => 'Письма читателей',
 	dove     => 'Грачи',
+	food     => 'Еда',
 };
 
 

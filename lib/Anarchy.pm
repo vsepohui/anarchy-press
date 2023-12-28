@@ -24,6 +24,7 @@ sub startup {
 	$r->get('/ads')->to('News#news');
 	$r->get('/letters')->to('News#news');
 	$r->get('/dove')->to('News#news');
+	$r->get('/food')->to('News#news');
 
 	$r->get('/:section/*article')->to('News#article');
 
