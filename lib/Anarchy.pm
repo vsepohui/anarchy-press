@@ -18,9 +18,12 @@ sub startup {
 	
 	my $r = $self->routes;
 	$r->get('/')->to('News#news');
+	$r->get('/feed.rss')->to('News#news');
+	
 	for (@{$self->config('sections')}) {
 		my ($key) = keys %$_;
 		$r->get('/' . $key)->to('News#news');
+		$r->get('/'.$key.'/feed.rss')->to('News#news');
 	}
 
 	$r->get('/:section/*article')->to('News#article');

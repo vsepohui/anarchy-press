@@ -109,7 +109,7 @@ sub news {
 	
 	my $title = '';
 		
-	if ($url eq '/') {	
+	if ($url eq '/' || $url eq '/feed.rss') {	
 		@posts = $self->section(keys %{$self->sections()});
 		$title = 'Печатное Издание';
 	} else {
@@ -125,6 +125,7 @@ sub news {
 	$self->render(
 		posts => \@posts,
 		title => 'Анархия :: ' . $title,
+		($url =~ /\/feed.rss$/) ? (template => 'news/feed', format => 'rss') : (),
 	);
 }
 

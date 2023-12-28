@@ -1,3 +1,4 @@
+% my $url = url_for;
 <!doctype html>
 <html lang="ru">
 <head>
@@ -6,6 +7,11 @@
     <meta name="description" content="">
     <meta name="generator" content="Wordpress">
     <title><%= title || 'Анархия :: Печатное Издание' %></title>
+    
+    % if (stash 'has_feed') {
+    <link rel="alternate" type="application/rss+xml" href="<%= $url eq '/' ? '/' : $url . '/'  %>feed.rss" />
+    % }
+    
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/style.css?v=8" rel="stylesheet">
 
@@ -31,7 +37,6 @@
 		<hr class="lh"/>
 		<p class="sub-title">Ежедневное Печатное Издание - издающееся Анархистами России с 2023 года.</p>
 		<hr/>
-% my $url = url_for;
 	<div class="nav-scroller py-1 mb-2 a-nav">
 	<nav class="nav justify-content-between">
 		<a class="nav-item nav-link link<%= ' active' if $url =~ /^\/$/ %>" href="/">Публикации</a>
