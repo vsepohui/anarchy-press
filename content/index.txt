@@ -1,3 +1,4 @@
+./politics/life-in-a-roach-trap.html
 ./politics/ritch-father-problem.html
 ./letters/5.html
 ./ads/indian-goa-trip.html
