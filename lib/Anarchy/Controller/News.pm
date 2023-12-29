@@ -6,6 +6,7 @@ use strict;
 use warnings;
 use 5.022;
 use FindBin qw($Bin);
+use POSIX qw/ceil/;
 use utf8;
 
 no warnings 'experimental::smartmatch';
@@ -77,7 +78,7 @@ sub section {
 	}
 	
 	my $ipp = $self->ITEM_PER_PAGE();
-	my $pages = int (scalar (@files) / $ipp) + 1;
+	my $pages = ceil (scalar (@files) / $ipp) ;
 	$self->stash(pages => $pages);
 	my $page = $self->stash('page');
 	return if $page > $pages;
