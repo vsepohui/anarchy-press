@@ -1,3 +1,4 @@
+./politics/karma-of-the-world.html
 ./game/campaign-jail.html
 ./politics/life-in-a-roach-trap.html
 ./politics/ritch-father-problem.html
