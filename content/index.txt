@@ -1,3 +1,4 @@
+./ads/indian-goa-trip.html
 ./politics/suzuki-day.html
 ./politics/future-of-russian-with-jesus-christ.html
 ./politics/future-of-russia-with-putin.html
