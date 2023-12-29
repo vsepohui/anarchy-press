@@ -1,3 +1,4 @@
+./politics/future-of-russia-with-putin.html
 ./dove/pasha-techninque.html
 ./ads/reg-ru-domain-registrator.html
 ./skazka/about-russian-ball.html
