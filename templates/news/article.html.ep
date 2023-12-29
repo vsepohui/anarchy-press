@@ -4,7 +4,7 @@
 
 <div class="container">
 <div class="center m-auto" style="align: center; max-width: 800px;">
-	% $article =~ s/\<h4(.*?)\>(.*?)\<\/h4\>/\<h1 class=\"h4\"$1\>$2\<\/h1\>$3/;
+	% $article =~ s/\<h4(.*?)\>(.*?)\<\/h4\>/\<h1$1\>$2\<\/h1\>$3/;
 	%== $article;
 </div>
 </div>
