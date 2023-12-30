@@ -1,3 +1,4 @@
+./politics/about-a-musician.html
 ./politics/vallet-roam.html
 ./politics/future-of-russia-part-2.html
 ./politics/how-to-read-book-of-dead.html
