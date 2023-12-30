@@ -1,3 +1,4 @@
+./politics/putins-budget.html
 ./food/translate-to-english.html
 ./food/money-for-food.html
 ./politics/about-a-musician.html
