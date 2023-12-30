@@ -1,3 +1,4 @@
+./game/president-ivan-trunaev-4.html
 ./game/president-ivan-trunaev-3.html
 ./game/president-ivan-trunaev-2.html
 ./game/president-ivan-trunaev-1.html
