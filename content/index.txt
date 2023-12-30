@@ -1,3 +1,4 @@
+./food/translate-to-english.html
 ./food/money-for-food.html
 ./politics/about-a-musician.html
 ./politics/vallet-roam.html
