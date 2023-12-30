@@ -1,3 +1,4 @@
+./game/president-ivan-trunaev-1.html
 ./game/campaign-president.html
 ./politics/putins-budget.html
 ./food/translate-to-english.html
