@@ -1,4 +1,3 @@
-./politics/buddha-metai-borning-prediction.html
 ./game/president-ivan-trunaev-4.html
 ./game/president-ivan-trunaev-3.html
 ./game/president-ivan-trunaev-2.html
