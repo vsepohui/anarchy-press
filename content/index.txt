@@ -1,4 +1,4 @@
-./creative/old-magician.html
+./dove/old-magician.html
 ./politics/mine-kampf-part-1.html
 ./politics/fazy-in-today.html
 ./tsygun/what-is-tsygun.html
