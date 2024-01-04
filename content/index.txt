@@ -1,3 +1,4 @@
+./tsygun/bird.html
 ./tsygun/fire.html
 ./tsygun/practice-of-way.html
 ./letters/6.html
