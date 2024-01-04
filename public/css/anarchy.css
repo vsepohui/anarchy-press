@@ -4816,7 +4816,7 @@ textarea.form-control-lg {
 .pagination-lg {
   --bs-pagination-padding-x: 1.5rem;
   --bs-pagination-padding-y: 0.75rem;
-  --bs-pagination-font-size: 1.25rem;
+  --bs-pagination-font-size: 1rem;
   --bs-pagination-border-radius: var(--bs-border-radius-lg);
 }
 
