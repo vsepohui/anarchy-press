@@ -1,3 +1,4 @@
+./skazka/about-budget-2.html
 ./skazka/about-budget.html
 ./tsygun/bird.html
 ./tsygun/fire.html
