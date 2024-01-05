@@ -1,3 +1,4 @@
+./skazka/about-budget.html
 ./tsygun/bird.html
 ./tsygun/fire.html
 ./tsygun/practice-of-way.html
