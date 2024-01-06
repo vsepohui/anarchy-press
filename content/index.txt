@@ -1,3 +1,4 @@
+./creative/zen.html
 ./skazka/clever-practice.html
 ./skazka/about-krishna.html
 ./game/about-checking.html
