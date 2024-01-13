@@ -1,4 +1,3 @@
-./dove/elimdar.html
 ./skazka/about-shiwa.html
 ./creative/zen.html
 ./skazka/clever-practice.html
