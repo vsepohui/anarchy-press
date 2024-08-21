@@ -1,3 +1,4 @@
+./artefact/007-talk-against-drunk-addiction.html
 ./artefact/006-powerness-of-anarcho-communistic-actions.html
 ./artefact/005-cannabis-platation-by-shiwa.html
 ./artefact/004-stop-the-war-in-ukraina.html
