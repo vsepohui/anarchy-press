@@ -1,3 +1,4 @@
+./artefact/002-song-about-dunk-for-a-man.html
 ./artefact/001-scheme.html
 ./ads/avito-macbook.html
 ./letters/8.html
