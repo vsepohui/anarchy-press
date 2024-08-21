@@ -1,3 +1,4 @@
+./ads/avito-macbook.html
 ./letters/8.html
 ./letters/7.html
 ./skazka/about-shiwa.html
