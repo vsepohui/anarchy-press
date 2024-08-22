@@ -12,14 +12,14 @@
     <link rel="alternate" type="application/rss+xml" href="<%= $url eq '/' ? '/' : $url . '/'  %>feed.rss" />
     % }
     
-	<link href="/css/anarchy.min.css?v=12" rel="stylesheet">
+	<link href="/css/anarchy.min.css?v=13" rel="stylesheet">
 
 	<link rel="apple-touch-icon" href="/ico-256.png" sizes="256x256">
 	<link rel="icon" href="/ico-32.png" sizes="32x32" type="image/png">
 	<link rel="icon" href="/favicon.png" sizes="16x16" type="image/png">
 	<link rel="icon" href="/favicon.png"/>
 	
-	<script src="/js/anarchy.min.js?v=6"></script>
+	<script src="/js/anarchy.min.js?v=7"></script>
 </head>
 <body>
 <main>
