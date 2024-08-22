@@ -3,12 +3,12 @@
 <!-- Put this script tag to the <head> of your page -->
 <div id="vk_comments"></div>
 
-<script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
+<script type="text/javascript" src="https://vk.com/js/api/openapi.js"></script>
 <script type="text/javascript">
 $(function() {
   VK.init({ apiId: 52196619, onlyWidgets: true });
-  VK.Widgets.Comments("vk_comments", {limit: 5, attach: false, height: 500});
-  /// $('#vk_comments').children('iframe').style('height', '100%');
+  VK.Widgets.Comments("vk_comments", {limit: 5, attach: false, height: 233});
+  $('#vk_comments').children('iframe').style('height', '100%');
 });
 </script>
 
