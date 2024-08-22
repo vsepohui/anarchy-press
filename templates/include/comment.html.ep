@@ -3,7 +3,7 @@
 <!-- Put this script tag to the <head> of your page -->
 <div id="vk_comments"></div>
 
-<script type="text/javascript" src="https://vk.com/js/api/openapi.js"></script>
+
 <script type="text/javascript">
 $(function() {
   VK.init({ apiId: 52196619, onlyWidgets: true });

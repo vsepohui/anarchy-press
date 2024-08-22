@@ -20,6 +20,7 @@
 	<link rel="icon" href="/favicon.png"/>
 	
 	<script src="/js/anarchy.min.js?v=7"></script>
+	<script type="text/javascript" src="https://vk.com/js/api/openapi.js"></script>
 </head>
 <body>
 <main>
