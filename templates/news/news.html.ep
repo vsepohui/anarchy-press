@@ -32,8 +32,10 @@
 			<li class="page-item"><a class="page-link" href="?page=<%= $pages %>"><%= $pages %></a></li>
 		% }
 	% } elsif ($page >= $pages - 1) {
-		<li class="page-item"><a class="page-link" href="?page=1">1</a></li>
-		<li class="page-item"><span class="page-link">&#8230;</span></li>
+		% if ($pages > 3) {
+			<li class="page-item"><a class="page-link" href="?page=1">1</a></li>
+			<li class="page-item"><span class="page-link">&#8230;</span></li>
+		% }
 		% for ($pages - 2..$pages) {
 			% if ($page == $_) {
 				<li class="page-item active"><span class="page-link"><%= $_ %></span></li>
