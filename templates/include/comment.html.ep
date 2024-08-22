@@ -1,18 +1,5 @@
 <hr/>
 
-<!-- Put this script tag to the <head> of your page -->
-<div id="vk_comments"></div>
-
-
-<script type="text/javascript">
-$(function() {
-  VK.init({ apiId: 52196619, onlyWidgets: true });
-  VK.Widgets.Comments("vk_comments", {limit: 5, attach: false, height: 233});
-  setTimeout(() => {
-	$('#vk_comments').children('iframe').attr('height', '233');
-  }, 1000);
-});
-</script>
 
 
 <br/><br/>
