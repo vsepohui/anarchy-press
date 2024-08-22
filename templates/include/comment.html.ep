@@ -1,18 +1,15 @@
 <hr/>
 
 <!-- Put this script tag to the <head> of your page -->
+<div id="vk_comments"></div>
+
 <script type="text/javascript" src="https://vk.com/js/api/openapi.js?168"></script>
 <script type="text/javascript">
+$(function() {
   VK.init({ apiId: 52196619, onlyWidgets: true });
-</script>
-
-<!-- Put this div tag to the place, where the Comments block will be -->
-<div id="vk_comments"></div>
-<script type="text/javascript">
-  VK.Widgets.Comments("vk_comments", {limit: 10, attach: false, height: 300});
+  VK.Widgets.Comments("vk_comments", {limit: 10, attach: false});
+});
 </script>
 
 
-<br/><br/>
-<br/><br/>
 <br/><br/>
