@@ -9,7 +9,7 @@ $(function() {
   VK.init({ apiId: 52196619, onlyWidgets: true });
   VK.Widgets.Comments("vk_comments", {limit: 5, attach: false, height: 233});
   setTimeout(() => {
-	$('#vk_comments').children('iframe').style('height', '100%');
+	$('#vk_comments').children('iframe').style('height', '233px');
   }, 1000);
 });
 </script>
