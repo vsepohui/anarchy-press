@@ -16,7 +16,7 @@ $(function() {
 });
 
   $(document).ready(function() {
-	$('.img-thumbnail').each(function() {
+	$('img.img-thumbnail').each(function() {
 			var i = $(this);
 			i.wrap('<a href="' + i.attr('src') + '" data-lightbox="gallery"></a>');
 	});
