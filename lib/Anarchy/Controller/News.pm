@@ -155,9 +155,6 @@ sub article {
 	if ($section eq 'stack') {
 		my $comment = $self->render_to_string('include/stack-comment');
 		$s .= "\n". $comment;
-	} else {
-		my $comment = $self->render_to_string('include/comment');
-		$s .= "\n". $comment;
 	}
 	
 	return $self->render(

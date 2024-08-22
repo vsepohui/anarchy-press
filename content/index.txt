@@ -1,3 +1,4 @@
+./stack/20240823-01.html
 ./tsygun/age-of-hands.html
 ./dove/super-jew.html
 ./politics/future-of-cannabis.html
