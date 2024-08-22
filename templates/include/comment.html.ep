@@ -7,7 +7,7 @@
 <script type="text/javascript">
 $(function() {
   VK.init({ apiId: 52196619, onlyWidgets: true });
-  VK.Widgets.Comments("vk_comments", {limit: 5, attach: false, height: '233px'});
+  VK.Widgets.Comments("vk_comments", {limit: 5, attach: false, height: 233});
 });
 </script>
 
