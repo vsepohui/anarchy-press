@@ -27,7 +27,7 @@
 				<li class="page-item"><a class="page-link" href="?page=<%= $_ %>"><%= $_ %></a></li>
 			% }
 		% }	
-		% if ($max_page > 3) {
+		% if ($pages > 3) {
 			<li class="page-item"><span class="page-link">&#8230;</span></li>
 			<li class="page-item"><a class="page-link" href="?page=<%= $pages %>"><%= $pages %></a></li>
 		% }
