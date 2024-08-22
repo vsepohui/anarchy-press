@@ -152,6 +152,14 @@ sub article {
 	
 	my ($title) = $s =~ /\<h4.*?\>(.*?)\<\/h4\>/;
 	
+	if ($section eq 'stack') {
+		my $comment = $self->render_to_string('include/stack-comment');
+		$s .= "\n". $comment;
+	} else {
+		my $comment = $self->render_to_string('include/comment');
+		$s .= "\n". $comment;
+	}
+	
 	return $self->render(
 		article => $s,
 		title   => $title . ' :: ' . $self->sections()->{$section} . ' :: Анархия',
