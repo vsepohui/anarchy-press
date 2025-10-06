@@ -12,4 +12,8 @@ Install at Debian
 # Or production:
 ```hypnotoad script/anarchy``` 
 
+# Starting
+
+In browser open: http://127.0.0.1:8000/
+
 # Developed by Ivan Trunaev 
