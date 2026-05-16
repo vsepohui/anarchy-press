@@ -18,4 +18,8 @@ In browser open: http://127.0.0.1:3000/ (devel)
 
 Or: http://127.0.0.1:9000/ (production)
 
+Makeup video on Teatchig from parts:
+
+``cd public/video && ./make-video-from-parts.sh``
+
 # Developed by Ivan Trunaev 
