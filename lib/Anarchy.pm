@@ -20,6 +20,7 @@ sub startup {
 	
 	my $r = $self->routes;
 	$r->get('/')->to('News#news');
+	$r->get('/home')->to('News#news');
 	$r->get('/feed.rss')->to('News#news');
 	
 	for (@{$self->config('sections')}) {

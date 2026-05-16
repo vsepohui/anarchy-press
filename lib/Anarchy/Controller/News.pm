@@ -117,7 +117,7 @@ sub news {
 	
 	my $title = '';
 		
-	if ($url eq '/' || $url eq '/feed.rss') {	
+	if ($url eq '/' || $url eq '/home' || $url eq '/feed.rss') {	
 		@posts = $self->section(keys %{$self->sections()}) or return $self->reply->not_found;
 		$title = 'Печатное Издание';
 	} else {
