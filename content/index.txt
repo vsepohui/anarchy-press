@@ -1,3 +1,4 @@
+./ads/ad-on-webite.html
 ./artefact/012-good-music-from-buddha.html
 ./dove/vk.html
 ./stack/20240823-01.html
