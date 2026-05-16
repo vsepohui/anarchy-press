@@ -14,6 +14,8 @@ Install at Debian
 
 # Starting
 
-In browser open: http://127.0.0.1:8000/
+In browser open: http://127.0.0.1:3000/ (devel)
+
+Or: http://127.0.0.1:9000/ (production)
 
 # Developed by Ivan Trunaev 
