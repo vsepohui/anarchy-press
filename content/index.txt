@@ -1,3 +1,4 @@
+./tsygun/covid-19-wtf.html
 ./stack/ending-of-ukraina-war-02.html
 ./stack/ending-of-ukraina-war.html
 ./creative/books-on-rupana-01.html
