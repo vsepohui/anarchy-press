@@ -1,3 +1,4 @@
+./politics/anti-covid-program.html
 ./tsygun/covid-19-future-of-healing-02.html
 ./tsygun/covid-19-future-of-healing.html
 ./tsygun/covid-19-wtf.html
