@@ -1,3 +1,4 @@
+./ads/opiate-lepicure.html
 ./creative/happy.html
 ./politics/anti-covid-program.html
 ./tsygun/covid-19-future-of-healing-02.html
